@@ -353,7 +353,7 @@ class Queue:
         @rtype: L{list} of L{bytes}
         @return: The base filenames of messages waiting to be relayed.
         """
-        return self.waiting.keys()
+        return list(self.waiting.keys())
 
 
     def hasWaiting(self):
@@ -376,7 +376,7 @@ class Queue:
         @return: The base filenames of messages in the process of being
             relayed.
         """
-        return self.relayed.keys()
+        return list(self.relayed.keys())
 
 
     def setRelaying(self, message):
